@@ -60,6 +60,15 @@ class IDEWidgetState extends State<IDEWidget> {
     return renderBox.localToGlobal(Offset(0, 16+16+4 + (16+8)*(lineNumber-2) ));
   }
 
+  int getCharCountOfLine(int lineNumber) { 
+    final List<String> lines = _controller.fullText.split('\n'); 
+    
+    if (lineNumber < lines.length) 
+      return lines[lineNumber-1].length; 
+    else
+      return 0; 
+  }
+
 
 
   @override

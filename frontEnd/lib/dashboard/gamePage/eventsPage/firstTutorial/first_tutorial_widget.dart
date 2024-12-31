@@ -146,6 +146,27 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
                     ),
                   ),
                 ),
+
+
+
+              //HighLight
+              if(_model.showHighlightLine)
+              Positioned(
+              left: _model.highlightPoz[0]+72,
+              top: _model.highlightPoz[1]+1,
+                child: Container(
+                  width: (_model.charCountOfLine/2) * 16+ 16*2,
+                  height: 21,
+                  decoration: BoxDecoration(
+                    color: Color(0x00FFFFFF),
+                    border: Border.all(
+                      color: Colors.black,
+                      width: 3,
+                    ),
+                  ),
+                ),
+              ),
+
               Column(
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -191,7 +212,7 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
                                       //Reset height
                                       _model.tutorialHeight = 100.0;
                                       _model.showHighlightLine = false;
-                                      //int lineToGet = -1;
+                                      int lineToGet = -1;
 
                                       switch (++_model.tutorialSlide) {
                                         case 1:
@@ -229,7 +250,7 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
                                               "A library is a collection of prewritten code that provides tools for your program.\n"
                                               "'iostream' helps us with input (taking data) and output (printing data).";
                                           _model.tutorialHeight=150.0;
-                                          //lineToGet=2;
+                                          lineToGet=2;
                                           break;
                                         case 11:
                                           _model.tutorialText = "Next line:\n\n"
@@ -265,14 +286,14 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
                                           break;
                                       }
 
-                                      int lineToGet = _model.tutorialSlide;
                                       //Avem highlith -> -> nr Linie -> Get Line offset -> display
                                       if( lineToGet!=-1)
                                       {
                                         Offset linePosition = (_ideWidgetKey.currentState as IDEWidgetState).getLinePosition(lineToGet);
                                         _model.highlightPoz = [linePosition.dx, linePosition.dy];
+                                        _model.charCountOfLine = (_ideWidgetKey.currentState as IDEWidgetState).getCharCountOfLine(lineToGet).toDouble();
+                                        print(_model.charCountOfLine.toString());
                                         _model.showHighlightLine = true;
-                                        print(_model.highlightPoz[0].toString() + " | " + _model.highlightPoz[1].toString() );
                                       }
                                       safeSetState(() {});
                                     },
@@ -318,22 +339,6 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
                   ),
                 ],
               ),
-
-
-
-            if(_model.showHighlightLine)
-            Positioned(
-              left: _model.highlightPoz[0],
-              top: _model.highlightPoz[1]+4,
-              child: Container(
-              decoration: BoxDecoration(
-                color: Colors.black,
-                ),
-                width: 200,
-                height: 18,
-              ),
-            ),
-
             ],
           ),
         ),
