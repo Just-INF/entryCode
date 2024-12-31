@@ -1,0 +1,8 @@
+version: '1'
+
+services:
+  compiler:
+    image: just-compiler
+    container_name: justCompile
+    ports:
+      - "6969:6969"

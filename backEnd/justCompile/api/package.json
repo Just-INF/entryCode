@@ -1,0 +1,8 @@
+{
+  "name": "justCompile",
+  "version": "1.0.0",
+  "description": "A simple C++ api code compiler",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

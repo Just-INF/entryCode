@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\EntryCode\\BackEnd\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\Auth\\sendEmail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|solutionrelative:NodejsWebApp1\\src\\Auth\\sendEmail.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\Auth\\editAccount.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|solutionrelative:NodejsWebApp1\\src\\Auth\\editAccount.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\Auth\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|solutionrelative:NodejsWebApp1\\src\\Auth\\auth.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\Auth\\emailStructure\\createAccountTemplate.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|solutionrelative:NodejsWebApp1\\src\\Auth\\emailStructure\\createAccountTemplate.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\setup\\createTables.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|solutionrelative:NodejsWebApp1\\src\\setup\\createTables.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\setup\\setup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|solutionrelative:NodejsWebApp1\\src\\setup\\setup.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\status\\status.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|solutionrelative:NodejsWebApp1\\src\\status\\status.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{966A80D7-3976-4BFC-9847-D9BA6F647168}|NodejsWebApp1\\NodejsWebApp1.njsproj|solutionrelative:NodejsWebApp1\\src\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "createAccountTemplate.html",
+              "DocumentMoniker": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\Auth\\emailStructure\\createAccountTemplate.html",
+              "RelativeDocumentMoniker": "NodejsWebApp1\\src\\Auth\\emailStructure\\createAccountTemplate.html",
+              "ToolTip": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\Auth\\emailStructure\\createAccountTemplate.html",
+              "RelativeToolTip": "NodejsWebApp1\\src\\Auth\\emailStructure\\createAccountTemplate.html",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-12-23T09:02:55.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "auth.js",
+              "DocumentMoniker": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\Auth\\auth.js",
+              "RelativeDocumentMoniker": "NodejsWebApp1\\src\\Auth\\auth.js",
+              "ToolTip": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\Auth\\auth.js",
+              "RelativeToolTip": "NodejsWebApp1\\src\\Auth\\auth.js",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-23T09:01:56.862Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "editAccount.js",
+              "DocumentMoniker": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\Auth\\editAccount.js",
+              "RelativeDocumentMoniker": "NodejsWebApp1\\src\\Auth\\editAccount.js",
+              "ToolTip": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\Auth\\editAccount.js",
+              "RelativeToolTip": "NodejsWebApp1\\src\\Auth\\editAccount.js",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-23T09:01:45.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "sendEmail.js",
+              "DocumentMoniker": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\Auth\\sendEmail.js",
+              "RelativeDocumentMoniker": "NodejsWebApp1\\src\\Auth\\sendEmail.js",
+              "ToolTip": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\Auth\\sendEmail.js",
+              "RelativeToolTip": "NodejsWebApp1\\src\\Auth\\sendEmail.js",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAQwBAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-23T09:00:07.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "createTables.js",
+              "DocumentMoniker": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\setup\\createTables.js",
+              "RelativeDocumentMoniker": "NodejsWebApp1\\src\\setup\\createTables.js",
+              "ToolTip": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\setup\\createTables.js",
+              "RelativeToolTip": "NodejsWebApp1\\src\\setup\\createTables.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-23T08:59:59.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "status.js",
+              "DocumentMoniker": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\status\\status.js",
+              "RelativeDocumentMoniker": "NodejsWebApp1\\src\\status\\status.js",
+              "ToolTip": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\status\\status.js",
+              "RelativeToolTip": "NodejsWebApp1\\src\\status\\status.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-23T08:59:40.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "index.js",
+              "DocumentMoniker": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\index.js",
+              "RelativeDocumentMoniker": "NodejsWebApp1\\src\\index.js",
+              "ToolTip": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\index.js",
+              "RelativeToolTip": "NodejsWebApp1\\src\\index.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-23T08:59:38.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "setup.js",
+              "DocumentMoniker": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\setup\\setup.js",
+              "RelativeDocumentMoniker": "NodejsWebApp1\\src\\setup\\setup.js",
+              "ToolTip": "D:\\EntryCode\\BackEnd\\NodejsWebApp1\\src\\setup\\setup.js",
+              "RelativeToolTip": "NodejsWebApp1\\src\\setup\\setup.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-23T08:59:22.305Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

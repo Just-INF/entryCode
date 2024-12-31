@@ -1,0 +1,6 @@
+D:\Flutter\VS\NodejsWebApp1\NodejsWebApp1\obj\Release\NodejsWebApp1.njsproj.AssemblyReference.cache
+D:\Flutter\VS\NodejsWebApp1\NodejsWebApp1\obj\Release\NodejsWebApp1.njsproj.CoreCompileInputs.cache
+D:\Flutter\VS\NodejsWebApp1\NodejsWebApp1\bin\Microsoft.NodejsTools.WebRole.dll
+D:\EntryCode\BackEnd\NodejsWebApp1\obj\Release\NodejsWebApp1.njsproj.AssemblyReference.cache
+D:\EntryCode\BackEnd\NodejsWebApp1\obj\Release\NodejsWebApp1.njsproj.CoreCompileInputs.cache
+D:\EntryCode\BackEnd\NodejsWebApp1\bin\Microsoft.NodejsTools.WebRole.dll
