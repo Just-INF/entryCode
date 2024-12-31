@@ -48,10 +48,18 @@ class IDEWidgetState extends State<IDEWidget> {
     _controller.fullText = newCode;
   }
 
-  Offset getFirstLinePosition() { 
-    final RenderBox renderBox = _codeFieldKey.currentContext?.findRenderObject() as RenderBox; 
-    return renderBox.localToGlobal(Offset.zero); 
+  //Get line poz
+  Offset getLinePosition(int lineNumber) {
+    final RenderBox renderBox = _codeFieldKey.currentContext?.findRenderObject() as RenderBox;
+    if(lineNumber==1)
+      return renderBox.localToGlobal(Offset(0, 16-4));
+    
+    if(lineNumber==2)
+      return renderBox.localToGlobal(Offset(0, 16+16+4));
+
+    return renderBox.localToGlobal(Offset(0, 16+16+4 + (16+8)*(lineNumber-2) ));
   }
+
 
 
   @override
@@ -69,7 +77,7 @@ class IDEWidgetState extends State<IDEWidget> {
               child: CodeField(
                 key: _codeFieldKey,
                 controller: _controller,
-                textStyle: const TextStyle(fontFamily: 'Consolas'),
+                textStyle: const TextStyle(fontFamily: 'Consolas', fontSize: 16),
                 gutterStyle: const GutterStyle(
                   textStyle: TextStyle(
                     height: 1.52,

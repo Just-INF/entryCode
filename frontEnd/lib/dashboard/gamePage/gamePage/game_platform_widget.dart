@@ -176,8 +176,8 @@ class _GamePlatformWidgetState extends State<GamePlatformWidget>
                       onOptionSelected: (option) { 
                         //_model.userOption = option;
                         if(option==1) {
-                          Offset firstLinePosition = (_ideWidgetKey.currentState as IDEWidgetState).getFirstLinePosition();
-                          print("Top: ${firstLinePosition.dy}, Left: ${firstLinePosition.dx}");
+                          Offset linePosition = (_ideWidgetKey.currentState as IDEWidgetState).getLinePosition(1);
+                          print("Top: ${linePosition.dy}, Left: ${linePosition.dx}");
                         }
                         else
                         {

@@ -32,6 +32,8 @@ class FirstTutorialModel extends FlutterFlowModel<FirstTutorialWidget> {
   bool entryPermit = false;
 
   int tutorialSlide = 0;
+  bool showHighlightLine = false;
+  List<double> highlightPoz = [-200,-200];
 
   String tutorialText = 'Hello Emanuel! I am Kaira from MAI and I will be responsible for your training regarding the new border automation project. We will start by explaining what a IDE is.Click this to continue...';
   double tutorialHeight = 100.0;

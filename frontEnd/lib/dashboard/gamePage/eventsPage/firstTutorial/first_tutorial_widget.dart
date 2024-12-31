@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:highlight/highlight.dart';
 import 'package:provider/provider.dart';
 import 'package:test_project/CustomWidgets/constants/constants.dart';
 import 'package:test_project/CustomWidgets/ide_widget.dart' as custom_widgets;
@@ -189,6 +190,8 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
                                       if(_model.tutorialSlide==0) (_ideWidgetKey.currentState as IDEWidgetState).setCode(tutorialCode);
                                       //Reset height
                                       _model.tutorialHeight = 100.0;
+                                      _model.showHighlightLine = false;
+                                      //int lineToGet = -1;
 
                                       switch (++_model.tutorialSlide) {
                                         case 1:
@@ -226,6 +229,7 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
                                               "A library is a collection of prewritten code that provides tools for your program.\n"
                                               "'iostream' helps us with input (taking data) and output (printing data).";
                                           _model.tutorialHeight=150.0;
+                                          //lineToGet=2;
                                           break;
                                         case 11:
                                           _model.tutorialText = "Next line:\n\n"
@@ -260,7 +264,16 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
                                               "Happy coding!";
                                           break;
                                       }
-                                      
+
+                                      int lineToGet = _model.tutorialSlide;
+                                      //Avem highlith -> -> nr Linie -> Get Line offset -> display
+                                      if( lineToGet!=-1)
+                                      {
+                                        Offset linePosition = (_ideWidgetKey.currentState as IDEWidgetState).getLinePosition(lineToGet);
+                                        _model.highlightPoz = [linePosition.dx, linePosition.dy];
+                                        _model.showHighlightLine = true;
+                                        print(_model.highlightPoz[0].toString() + " | " + _model.highlightPoz[1].toString() );
+                                      }
                                       safeSetState(() {});
                                     },
                                     child: Container(
@@ -305,6 +318,22 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
                   ),
                 ],
               ),
+
+
+
+            if(_model.showHighlightLine)
+            Positioned(
+              left: _model.highlightPoz[0],
+              top: _model.highlightPoz[1]+4,
+              child: Container(
+              decoration: BoxDecoration(
+                color: Colors.black,
+                ),
+                width: 200,
+                height: 18,
+              ),
+            ),
+
             ],
           ),
         ),
