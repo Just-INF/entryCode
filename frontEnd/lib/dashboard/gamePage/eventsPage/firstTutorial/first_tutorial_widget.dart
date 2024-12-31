@@ -152,7 +152,7 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
               //HighLight
               if(_model.showHighlightLine)
               Positioned(
-              left: _model.highlightPoz[0]+72,
+              left: _model.highlightPoz[0]+72-16,
               top: _model.highlightPoz[1]+1,
                 child: Container(
                   width: (_model.charCountOfLine/2) * 16+ 16*2,
@@ -160,7 +160,7 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
                   decoration: BoxDecoration(
                     color: Color(0x00FFFFFF),
                     border: Border.all(
-                      color: Colors.black,
+                      color: Colors.redAccent,
                       width: 3,
                     ),
                   ),
@@ -208,7 +208,14 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
                                     hoverColor: Colors.transparent,
                                     highlightColor: Colors.transparent,
                                     onTap: () async {
-                                      if(_model.tutorialSlide==0) (_ideWidgetKey.currentState as IDEWidgetState).setCode(tutorialCode);
+                                      //Setting code
+                                      if(_model.tutorialSlide==0) (_ideWidgetKey.currentState as IDEWidgetState).setCode(startingCode);
+                                      if(_model.tutorialSlide==18) (_ideWidgetKey.currentState as IDEWidgetState).setCode(variablesAndDataTypes);
+                                      if(_model.tutorialSlide==23) (_ideWidgetKey.currentState as IDEWidgetState).setCode(basicArithmeticOperations);
+                                      if(_model.tutorialSlide==29) (_ideWidgetKey.currentState as IDEWidgetState).setCode(conditionalStatements);
+                                      if(_model.tutorialSlide==33) (_ideWidgetKey.currentState as IDEWidgetState).setCode(loops);
+                                      if(_model.tutorialSlide==37) (_ideWidgetKey.currentState as IDEWidgetState).setCode(functions);
+                                      if(_model.tutorialSlide==40) (_ideWidgetKey.currentState as IDEWidgetState).setCode(classes);
                                       //Reset height
                                       _model.tutorialHeight = 100.0;
                                       _model.showHighlightLine = false;
@@ -216,75 +223,191 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
 
                                       switch (++_model.tutorialSlide) {
                                         case 1:
-                                          _model.tutorialText = "An IDE is where all the magic happens. It’s the place where you write your code. It typically includes a source code editor, an autocompleter, and a debugger.";
+                                          _model.tutorialText = "An IDE is where you write your code. It usually includes a text editor, auto-complete feature, and a debugger.";
                                           break;
                                         case 2:
-                                          _model.tutorialText = "Think of an IDE as your workspace for coding. It helps you write, test, and debug your code efficiently by providing helpful features like syntax highlighting, code completion, and error detection.";
+                                          _model.tutorialText = "Think of an IDE as your coding workspace. It helps you write, test, and fix your code efficiently with features like syntax highlighting and error detection.";
                                           break;
                                         case 3:
-                                          _model.tutorialText = "What you see in front of you is an IDE provided by us to help you get started with coding. Now that you know what you’re looking at, let's go further.";
+                                          _model.tutorialText = "What you see in front of you is an IDE that we provide to help you start coding. Now that you know what it is, let's continue.";
                                           break;
                                         case 4:
-                                          _model.tutorialText = "We are going to continue with what is a Programming Language. Programming languages are similar to human languages. They contain words, punctuation marks, mathematical operations, and follow specific rules. Programs that run on any computer are written in a programming language. There are numerous programming languages, such as C, C++, Pascal, Java, Python, PHP, JavaScript, etc.";
-                                          _model.tutorialHeight = 150.0;
+                                          _model.tutorialText = "Next, let's talk about Programming Languages. They are similar to human languages and contain words, punctuation, math symbols, and rules. Many programs are written in languages like C, C++, Java, Python, and more.";
                                           break;
                                         case 5:
-                                          _model.tutorialText = "Programs that run on any computer are written in a programming language. There are numerous programming languages, such as C, C++, Pascal, Java, Python, PHP, JavaScript, etc.";
+                                          _model.tutorialText = "Programs running on computers are written in programming languages. There are many languages such as C, C++, Pascal, Java, Python, PHP, and JavaScript.";
                                           break;
                                         case 6:
-                                          _model.tutorialText = "A program written in a programming language is called source code, and it needs to be translated into a language that the processor understands, called machine code or executable program.";
+                                          _model.tutorialText = "A program written in a programming language is called source code. It needs to be translated into machine code or executable code that the computer understands.";
                                           break;
                                         case 7:
-                                          _model.tutorialText = "For certain programming languages, the translation operation is called compilation (like in C, C++, Pascal, etc.), while for other languages (PHP, Python, JavaScript, etc.), the translation operation is called interpretation. The translation is done by a specialized program called a compiler or interpreter.";
-                                          _model.tutorialHeight = 125.0;
+                                          _model.tutorialText = "Some programming languages need to be compiled (like C, C++, Pascal). Others (like PHP, Python, JavaScript) are interpreted. A compiler or interpreter does this translation.";
                                           break;
                                         case 8:
-                                          _model.tutorialText = "For this automation project, we will use C++. And remember that you can find all courses including this one on the dasboard -> courses tab.";
+                                          _model.tutorialText = "For this project, we will use C++ as it is one of the most used languages in the world.\n"
+                                                                "Remember, you can find all courses including this one in the dashboard under the courses tab.";
                                           break;
                                         case 9:
-                                          _model.tutorialText = "Now, let's dive into the structure of a basic C++ program with our 'Hello, World!' example.";
+                                          _model.tutorialText = "Now, let's explore the structure of a basic C++ program with our 'Hello, World!' example.";
                                           break;
                                         case 10:
-                                          _model.tutorialText = "Let's start with the first line:\n\n"
-                                              "This line tells the compiler to include the 'iostream' library.\n"
-                                              "A library is a collection of prewritten code that provides tools for your program.\n"
-                                              "'iostream' helps us with input (taking data) and output (printing data).";
-                                          _model.tutorialHeight=150.0;
-                                          lineToGet=2;
+                                          _model.tutorialText = "First, let's look at the line that includes the 'iostream' library.\n\n"
+                                                                "A library is prewritten code that helps with specific tasks like input and output.";
+                                          lineToGet = 2;
                                           break;
                                         case 11:
-                                          _model.tutorialText = "Next line:\n\n"
-                                              "`using namespace std;`:\n"
-                                              "This line allows us to use standard library functions without typing `std::` before them.\n"
-                                              "It makes our code simpler and easier to read.";
+                                          _model.tutorialText = "Next, we have a line that allows us to use standard library functions without typing `std::` each time. It simplifies our code.";
+                                          lineToGet = 4;
                                           break;
                                         case 12:
-                                          _model.tutorialText = "Now, the main function:\n\n"
-                                              "`int main() {` and `}`:\n"
-                                              "This is where our program starts running.\n"
-                                              "Every C++ program must have a main function.\n"
-                                              "Think of it as the starting point of the program.";
+                                          _model.tutorialText = "Now, let's look at the main function. It starts with a '{' and ends with a '}'.\n"
+                                                                "This is where our program starts running. Every C++ program must have a main function.";
+                                          lineToGet = 6;
                                           break;
                                         case 13:
-                                          _model.tutorialText = "Inside the main function, we have this line:\n\n"
-                                              "`cout << \"Hello, World!\" << endl;`:\n"
-                                              "`cout` is used for printing text on the screen.\n"
-                                              "The `<<` operator sends the text to `cout`.\n"
-                                              "`endl` moves the cursor to a new line, so the next output starts on the next line.";
+                                          _model.tutorialText = "Inside the main function, we have a line using `cout` to print text on the screen.\n"
+                                                                "The `<<` operator sends the text to `cout`, and `endl` moves the cursor to a new line.";
+                                          lineToGet = 7;
                                           break;
                                         case 14:
-                                          _model.tutorialText = "Finally, this line:\n\n"
-                                              "`return 0;`:\n"
-                                              "This ends the main function and returns the value `0` to the system.\n"
-                                              "It indicates that the program ran successfully.";
+                                          _model.tutorialText = "Finally, the return line.\n"
+                                                                "This ends the main function and returns `0` to indicate that the program ran successfully.";
+                                          lineToGet = 8;
                                           break;
                                         case 15:
-                                          _model.tutorialText = "Now you know the basics of C++ programming!\n\n"
-                                              "You can start experimenting with different code and see how it works.\n"
-                                              "Remember, practice makes perfect.\n"
-                                              "Happy coding!";
+                                          _model.tutorialText = "And lastly, comments.\n"
+                                                                "Comments are text in your code that are not executed by the program. They are used to explain your code and make it more readable for humans.\n"
+                                                                "Single-line comments start with //. Everything after // on that line is ignored by the compiler.";
+                                          _model.tutorialHeight = 150.0;
+                                          lineToGet = 10;
+                                          break;
+                                        case 16:
+                                          _model.tutorialText = "For comments that span multiple lines, use /* to start the comment and */ to end it.\n"
+                                                                "These comments are also ignored by the compiler.";
+                                          lineToGet = 11;
+                                          break;
+                                        case 17:
+                                          _model.tutorialText = "Now you know the basics of C++ programming!\n"
+                                                                "Next, we'll explore variable types and what they can store. Remember, you can always check all courses and click through this if you already know the material.\n"
+                                                                "Happy coding!";
+                                          _model.tutorialHeight = 125.0;
+                                          break;
+
+                                        // Variables and Data Types
+                                        case 18:
+                                          _model.tutorialText = "In programming, variables are used to store data that can change. Let's start with some common data types in C++.";
+                                          break;
+                                        case 19:
+                                          _model.tutorialText = "An `int` stores whole numbers.";
+                                          lineToGet = 8;
+                                          break;
+                                        case 20:
+                                          _model.tutorialText = "`double` is used for decimal numbers.";
+                                          lineToGet = 12;
+                                          break;
+                                        case 21:
+                                          _model.tutorialText = "`char` is used for single characters.";
+                                          lineToGet = 16;
+                                          break;
+                                        case 22:
+                                          _model.tutorialText = "`string` is used for text.";
+                                          lineToGet = 20;
+                                          break;
+
+                                        // Basic Arithmetic Operations
+                                        case 23:
+                                          _model.tutorialText = "You can perform basic arithmetic operations with variables. Let's look at some examples.";
+                                          break;
+                                        case 24:
+                                          _model.tutorialText = "Addition example.";
+                                          lineToGet=9;
+                                          break;
+                                        case 25:
+                                          _model.tutorialText = "Subtraction example.";
+                                          lineToGet=13;
+                                          break;
+                                        case 26:
+                                          _model.tutorialText = "Multiplication example.";
+                                          lineToGet=17;
+                                          break;
+                                        case 27:
+                                          _model.tutorialText = "Division example.";
+                                          lineToGet=21;
+                                          break;
+                                        case 28:
+                                          _model.tutorialText = "Remember, division by zero is not allowed and will cause an error.";
+                                          break;
+
+                                        // Conditional Statements
+                                        case 29:
+                                          _model.tutorialText = "Conditional statements let you run different code based on certain conditions. Let's start with `if` statements.";
+                                          break;
+                                        case 30:
+                                          _model.tutorialText = "`if` statement example.";
+                                          lineToGet=9;
+                                          break;
+                                        case 31:
+                                          _model.tutorialText = "`else` statement example.";
+                                          lineToGet=16;
+                                          break;
+                                        case 32:
+                                          _model.tutorialText = "`else if` statement example.";
+                                          lineToGet=23;
+                                          break;
+
+                                        // Loops
+                                        case 33:
+                                          _model.tutorialText = "Loops let you run the same block of code multiple times. Let's look at `for` and `while` loops.";
+                                          break;
+                                        case 34:
+                                          _model.tutorialText = "`for` loop example.";
+                                          lineToGet=7;
+                                          break;
+                                        case 35:
+                                          _model.tutorialText = "`while` loop example.";
+                                          lineToGet=13;
+                                          break;
+                                        case 36:
+                                          _model.tutorialText = "Be careful with loops to avoid infinite loops, which will run forever if the condition never becomes false.";
+                                          break;
+
+                                        // Functions
+                                        case 37:
+                                          _model.tutorialText = "Functions are blocks of code that perform a specific task. They help you organize your code and make it reusable.";
+                                          break;
+                                        case 38:
+                                          _model.tutorialText = "Defining a function.";
+                                          lineToGet=5;
+                                          break;
+                                        case 39:
+                                          _model.tutorialText = "Calling a function.";
+                                          lineToGet=10;
+                                          break;
+
+                                        // Classes
+                                        case 40:
+                                          _model.tutorialText = "Classes are blueprints for creating objects in C++. They encapsulate data and functions that operate on that data.";
+                                          break;
+                                        case 41:
+                                          _model.tutorialText = "Defining a class.";
+                                          lineToGet=6;
+                                          break;
+                                        case 42:
+                                          _model.tutorialText = "Creating an object.";
+                                          lineToGet=16;
+                                          break;
+
+                                        // Conclusion
+                                        case 43:
+                                          _model.tutorialText = "Now you know the basics of C++ programming, including variables, loops, functions, and classes!\n"
+                                                                "Remember, you can always check all courses.\n"
+                                                                "Welcome to the job!";
+                                          _model.tutorialHeight = 125;
                                           break;
                                       }
+
+
+
 
                                       //Avem highlith -> -> nr Linie -> Get Line offset -> display
                                       if( lineToGet!=-1)
@@ -292,7 +415,6 @@ class _FirstTutorialWidgetState extends State<FirstTutorialWidget>
                                         Offset linePosition = (_ideWidgetKey.currentState as IDEWidgetState).getLinePosition(lineToGet);
                                         _model.highlightPoz = [linePosition.dx, linePosition.dy];
                                         _model.charCountOfLine = (_ideWidgetKey.currentState as IDEWidgetState).getCharCountOfLine(lineToGet).toDouble();
-                                        print(_model.charCountOfLine.toString());
                                         _model.showHighlightLine = true;
                                       }
                                       safeSetState(() {});

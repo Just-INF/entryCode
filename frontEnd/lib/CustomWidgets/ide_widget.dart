@@ -30,6 +30,7 @@ class IDEWidgetState extends State<IDEWidget> {
       text: "", // Initial code
       language: cpp,
       namedSectionParser: const BracketsStartEndNamedSectionParser(),
+      
     );
 
     setupIDE();
@@ -88,6 +89,7 @@ class IDEWidgetState extends State<IDEWidget> {
                 controller: _controller,
                 textStyle: const TextStyle(fontFamily: 'Consolas', fontSize: 16),
                 gutterStyle: const GutterStyle(
+                  showFoldingHandles: false,
                   textStyle: TextStyle(
                     height: 1.52,
                     color: Colors.purple,
